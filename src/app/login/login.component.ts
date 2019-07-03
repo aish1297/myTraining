@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,Validators} from '@angular/forms';
+import {FormControl,Validators, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,15 +12,20 @@ export class LoginComponent implements OnInit {
     lastName: string = "Kid";
     placeName: string ='';
   
-    usernameFormControl = new FormControl('', [
-        Validators.required,
-        Validators.maxLength(20),
-        Validators.pattern('^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$')
-    ]);
-    passwordFormControl = new FormControl('', [
-        Validators.required,
-        Validators.maxLength(10)
-    ]);
+    // usernameFormControl = new FormControl('', [
+    //     Validators.required,
+    //     Validators.maxLength(20),
+    //     Validators.pattern('^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$')
+    // ]);
+    // passwordFormControl = new FormControl('', [
+    //     Validators.required,
+    //     Validators.maxLength(10)
+    // ]);
+
+    loginForm = new FormGroup({
+        username: new FormControl(''),
+        password: new FormControl(''),
+      });
     constructor() {
     }
 
@@ -29,6 +34,10 @@ export class LoginComponent implements OnInit {
 
     showAlert() {
         alert('Hey Bucketyyyyyyyyy!!!');
+    }
+
+    loginUser() {
+
     }
 
 }
