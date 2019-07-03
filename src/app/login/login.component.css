@@ -1,0 +1,10 @@
+.login-container {
+    margin-top: 15%;
+    width: 400px;
+    margin-left: 38%;
+}
+
+.login-card {
+    background-image: url("/./src/assets/rainbow.png");
+    background-size: cover;
+}

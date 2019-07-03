@@ -1,19 +1,19 @@
-<div> 
+<!-- <div>  -->
   <!-- interpolation binding from component to view  -->
-  <h2>{{firstName}} {{lastName}}</h2>
+  <!-- <h2>{{firstName}} {{lastName}}</h2> -->
   <!-- property binding -> binding firstName to the innerHTML of the span tag -->
-  <span [innerHTML]='firstName'></span>
+  <!-- <span [innerHTML]='firstName'></span> -->
   <!-- style binding -->
-  <h1 style="color: darkgreen">Let's go to Amazon Forest !</h1>
+  <!-- <h1 style="color: darkgreen">Let's go to Amazon Forest !</h1> -->
   <!-- two way databinding -> exchange data from the component to view and from view to the component -->
-  <div>
+  <!-- <div>
     Enter the place you want to go <input type="text" [(ngModel)]='placeName' />
     Yayy ! {{placeName}}
   </div>
-  <br>
+  <br> -->
   <!-- one way -> event binding -->
-  <button (click)="showAlert()">CLICK ME :( </button>
-</div>
+  <!-- <button (click)="showAlert()">CLICK ME :( </button>
+</div> -->
 
 <!-- <mat-card>
     <mat-card-header>
@@ -35,12 +35,25 @@
       </mat-card-content>
     </mat-card-header>
   </mat-card> -->
-<div>
+<div class="login-container">
+  <mat-card class="login-card">
+      <mat-card-title>
+          Login
+      </mat-card-title>
+  <mat-card-content>
   <form>
     <mat-form-field>
-      <input matInput placeholder="=Username" [formControl]="usernameFormControl">
+      <input matInput placeholder="Username" [formControl]="usernameFormControl">
       <mat-error *ngIf="usernameFormControl.hasError('username') && !usernameFormControl.hasError('required')">Please enter a valid email address</mat-error>
     </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" [formControl]="passwordFormControl">
+      <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">Please enter a valid password</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <button mat-raised-button type="submit" color="primary">LoGiN</button>
+    </mat-form-field>
   </form>
-
+</mat-card-content>
+</mat-card>
 </div>
