@@ -36,31 +36,34 @@
     </mat-card-header>
   </mat-card> -->
 <div class="login-container">
-  <mat-card class="login-card">
-      <mat-card-title>
-          Login
-      </mat-card-title>
-  <mat-card-content>
-  <form [formGroup]="loginForm">
-    <mat-form-field>
-        <label>
-            Username/Email:
-            <input type="email" formControlName="username">
+    <mat-card class="login-card">
+        <mat-card-title>
+            Login
+        </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+        <mat-form-field>
+          <label>
+              <input matInput 
+                     type="email"
+                     formControlName="username">
           </label>      
-    </mat-form-field>
-    <mat-form-field>
-        <label>
-            Password:
-            <input type="password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field>
+          <label>
+              <input matInput 
+                     type="password"
+                     formControlName="password">
           </label>
-    </mat-form-field>
-    <mat-form-field>
-      <button mat-raised-button 
-              type="submit" 
-              color="primary"
-              (click)="loginUser()">LoGiN</button>
-    </mat-form-field>
-  </form>
-</mat-card-content>
-</mat-card>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button 
+                  type="submit" 
+                  color="primary"
+                  (click)="loginUser()">LoGiN
+          </button>
+        </div>
+      </form>
+    </mat-card-content> 
+  </mat-card>
 </div>
