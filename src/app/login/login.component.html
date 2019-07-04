@@ -35,35 +35,54 @@
       </mat-card-content>
     </mat-card-header>
   </mat-card> -->
-<div class="login-container">
-    <mat-card class="login-card">
-        <mat-card-title>
-            Login
-        </mat-card-title>
-    <mat-card-content>
-      <form [formGroup]="loginForm">
-        <mat-form-field>
-          <label>
-              <input matInput 
-                     type="email"
-                     formControlName="username">
-          </label>      
-        </mat-form-field>
-        <mat-form-field>
-          <label>
-              <input matInput 
-                     type="password"
-                     formControlName="password">
-          </label>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button 
-                  type="submit" 
-                  color="primary"
-                  (click)="loginUser()">LoGiN
-          </button>
-        </div>
-      </form>
-    </mat-card-content> 
-  </mat-card>
+
+<div class="outer-container">
+  <!-- <mat-toolbar>
+        <span>My Application</span>
+  </mat-toolbar> -->
+  <div class="login-container">
+      <mat-card class="login-card">
+          <mat-card-title>
+              LOGIN 
+          </mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="loginForm">
+          <mat-form-field>
+            <label>
+                <input matInput 
+                       type="email"
+                       placeholder="username/email"
+                       formControlName="username">
+            </label>     
+            <mat-error *ngFor="let validation of userValidationMessages['username']">
+              <mat-error class="error-message" 
+                         *ngIf="loginForm.get('username').hasError(validation.type) && 
+                               (loginForm.get('username').dirty || loginForm.get('username').touched)">{{validation.errorMessage}}</mat-error>
+              </mat-error> 
+          </mat-form-field>
+          <mat-form-field>
+            <label>
+                <input matInput 
+                       type="password"
+                       placeholder="password"
+                       formControlName="password">
+            </label>
+            <mat-error *ngFor="let validation of userValidationMessages['password']">
+              <mat-error class="error-message"
+                               *ngIf="loginForm.get('password').hasError(validation.type) && 
+                                     (loginForm.get('password').dirty || loginForm.get('password').touched)">{{validation.errorMessage}}</mat-error>
+            </mat-error> 
+          </mat-form-field>
+          <div>
+            <button mat-raised-button 
+                    type="submit" 
+                    color="primary"
+                    (click)="loginUser()"
+                    class="login-button" [disabled]="!loginForm.valid">LoGiN
+            </button>
+          </div>
+        </form>
+      </mat-card-content> 
+    </mat-card>
+  </div>
 </div>

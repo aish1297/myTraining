@@ -1,0 +1,4 @@
+.home-container {
+    background-image: url("/./src/assets/home.jpg");
+    background-size: cover;
+}

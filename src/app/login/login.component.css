@@ -2,9 +2,27 @@
     margin-top: 15%;
     width: 400px;
     margin-left: 38%;
+
 }
 
 .login-card {
-    background-image: url("/./src/assets/rainbow.png");
+    background-image: url("/./src/assets/images.jpg");
     background-size: cover;
+    
+}
+
+.images:hover{
+    opacity: 0.5;
+}
+
+.login-button {
+    margin-left: 65%;
+}
+
+.outer-container {
+    background-image: url("/./src/assets/travel.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
