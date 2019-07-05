@@ -1,0 +1,42 @@
+
+Level 1: 
+   - Creating angular application using angular-CLI
+   - understanding the usage of files and folder's inside the application
+   - how ng-serve, ng-build command works
+   - how angular application is compiling
+   - create a sample for the following data binding's
+        - two way data binding
+        - event binding
+        - property binding
+   - understand the difference between model driven and template driven forms
+       - create a login form using model driven, that should have the following
+		- User name (should be an email, not more than 20 char, mandatory)
+		- password (type should be password, maximum 10 char, mandatory)
+		- Login button (should be disabled if mandatory fields are not filled)
+			- on submitting display the user name and password in HTML(i.e. below the submit button)
+  - understanding of angular routing with child components
+	- create three child components and use routing for navigations
+  - understand the usage of angular service 
+  - integrating with any of free grid
+  - integrating with angular-material
+  
+  - User CRUD sample
+	- login page, once you user entered the credentials, redirect to #user view page
+	- user view page: 
+		- need to display all the created users in grid
+		- provide the option to create, update, delete user
+	- user create page:
+		- use minimum 6 fields and model driven form
+		- store the create user in service file
+                - use the service file variable to display in the grid
+		- once its created redirected to #view page
+        - update user page:
+		- populate the selected  to user in the form
+		- store the update user in service file
+		- once its updated redirected to #view page
+	- delete user pop up:
+		- need to get the confirmation from the user before deleting 
+		- use modal dialogue for pop ups
+		- delete the user from service and refresh the grid data
+   - understand the JSON-server concept:
+	- try to integrate the User CRUD with JSON server. instead of service, store the data's in json server.`
