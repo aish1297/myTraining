@@ -1,4 +1,29 @@
+.header-container {
+    margin-top: 0%;
+    justify-content: center;
+    position: sticky;
+    /* background-image: url("/./src/assets/1080.jpg"); */
+    background: rgba(0, 0, 0, 0.1);
+    color: azure;
+
+}
+
+.footer-container {
+    margin-top: 40%;
+    justify-content: center;
+    position: sticky;
+    /* background-image: url("/./src/assets/1080.jpg"); */
+    background: rgba(0, 0, 0, 0.1);
+    color: azure;
+}
+
+.logout{
+    margin-left: 90%;
+    cursor: pointer;
+}
+
 .home-container {
     background-image: url("/./src/assets/home.jpg");
-    background-size: cover;
+    background-size: cover; 
+    /* position: absolute; */
 }

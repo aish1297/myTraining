@@ -6,21 +6,22 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
 import { HomeComponent } from './home/home.component';
-import { SharedComponent } from './shared/shared.component';
+import { DashboardComponent } from './home/dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SharedComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { SharedComponent } from './shared/shared.component';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
 
   ],
   providers: [],
